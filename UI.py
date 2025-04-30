@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import  ttk
 
 root = tkinter.Tk()
-root.geometry('400x260')
+root.geometry('350x260')
 root.resizable(False, False)
 root.title('Keanu Helper')
 # root.configure(bg='skyblue')
@@ -69,8 +69,10 @@ delete_after = ttk.Checkbutton(root, text='Delete After Import', variable=checkb
                                )
 delete_after.place(x=200, y=84)
 
+values = ['Main', 'Release', 'Staging']
 select_branch = ttk.Combobox(root,
-                             values=['Main', 'Release', 'Staging'],
+                             values=values,
+                             state='readonly'
                              )
 select_branch.set('Main')
 select_branch.place(x=200, y=120)
